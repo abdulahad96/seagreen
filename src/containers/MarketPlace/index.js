@@ -7,7 +7,7 @@ const MarketPlace = ({ navigation }) => {
 
   return (
     <View style={{ ...styles.container }}>
-      <Text style={{ ...styles.mainHeading }}>Digital</Text>
+      <Text style={{ ...styles.mainHeading }}>marketPlace</Text>
     </View>
   );
 }

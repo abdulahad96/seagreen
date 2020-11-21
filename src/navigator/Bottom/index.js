@@ -6,7 +6,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 import {MarketPlace, BatchDetails, Seaweed, Home} from '../../containers';
-import {Metrics, Fonts, Colors} from '../../theme';
+import {Metrics, Fonts, Colors,Images} from '../../theme';
 import CustomTabBar from './TabBar';
 
 const renderMaterialCommunityIcons = (name, color, size) => (
@@ -48,35 +48,22 @@ const BottomTabsScreen = () => (
     initialRouteName="Home">
     <BottomTabs.Screen
       name="Home"
+      image={Images.home_white}
       component={SeaweedStackScreen}
-      options={{
-        tabBarIcon: ({color, size}) =>
-          renderMaterialCommunityIcons('access-point', color, size),
-      }}
     />
     <BottomTabs.Screen
       name="Seaweed"
+      image={Images.seaweed}
       component={SeaweedStackScreen}
-      options={{
-        tabBarIcon: ({color, size}) =>
-          renderMaterialIcons('connected-tv', color, size),
-      }}
     />
     <BottomTabs.Screen
       name="BatchDetails"
+      image={Images.brcase}
       component={BatchDetailStackScreen}
-      options={{
-        tabBarIcon: ({color, size}) =>
-          renderMaterialCommunityIcons('fire', color, size),
-      }}
     />
     <BottomTabs.Screen
       name="MarketPlace"
       component={MarketPlaceStackScreen}
-      options={{
-        tabBarIcon: ({color, size}) =>
-          renderMaterialCommunityIcons('youtube', color, size),
-      }}
     />
   </BottomTabs.Navigator>
 );

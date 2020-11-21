@@ -1,8 +1,8 @@
 //* /src/components/TabBar.js */
 
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import {Colors, Metrics} from '../../theme';
+import {View, Text, StyleSheet, TouchableOpacity,Image} from 'react-native';
+import {Colors, Metrics,Images} from '../../theme';
 
 const S = StyleSheet.create({
   container: {
@@ -22,24 +22,39 @@ function renderItems(isFocused, label) {
           width: Metrics.screenHeight * 0.12,
           height: Metrics.screenHeight * 0.12,
           borderRadius: 100,
-          borderColor: Colors.whitesmoke,
-          borderWidth: Metrics.ratio(8),
+          backgroundColor: Colors.whitesmoke,
           top: Metrics.ratio(-30),
           justifyContent: "center",
           alignItems: "center"
         }}>
         <View
           style={{
-            width: Metrics.screenHeight * 0.08,
-            height: Metrics.screenHeight * 0.08,
+            width: '80%',
+            height: '80%',
             borderRadius: 100,
-            backgroundColor: Colors.white
-          }}></View>
+            backgroundColor: Colors.sea_light_grey,
+            justifyContent:"center",
+            alignItems:"center",
+            borderRadius: 100,
+            elevation:20,
+            shadowColor: "rgba(171, 180, 189, 0.35)",
+            shadowOffset: { width: 0, height: 10 },
+            shadowOpacity: 10,
+            shadowRadius: 20,
+          }}>
+                    <Image
+        source={Images.qrCode}
+          style={{
+            width: '90%',
+            height: '90%',
+            
+          }}/>
+          </View>
       </View>
     );
   }
 
-  return <Text>{label}</Text>;
+  return <Text>{label}1</Text>;
 }
 
 function CustomTabBar({state, descriptors, navigation}) {
@@ -59,7 +74,7 @@ function CustomTabBar({state, descriptors, navigation}) {
         backgroundColor: Colors.lightseagreen,
       }}>
       {state.routes.map((route, index) => {
-        console.log('CustomTabBar -> route', route);
+        console.log(route)
         const {options} = descriptors[route.key];
         const label =
           options.tabBarLabel !== undefined
