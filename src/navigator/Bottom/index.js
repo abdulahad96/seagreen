@@ -1,13 +1,13 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {Text} from 'react-native';
+import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-import { MarketPlace, BatchDetails, Seaweed, Home } from '../../containers';
-import { Metrics, Fonts, Colors } from '../../theme';
-
+import {MarketPlace, BatchDetails, Seaweed, Home} from '../../containers';
+import {Metrics, Fonts, Colors} from '../../theme';
+import CustomTabBar from './TabBar';
 
 const renderMaterialCommunityIcons = (name, color, size) => (
   <MaterialCommunityIcons name={name} color={color} size={size} />
@@ -44,26 +44,21 @@ const MarketPlaceStackScreen = () => (
 const BottomTabs = createBottomTabNavigator();
 const BottomTabsScreen = () => (
   <BottomTabs.Navigator
-    tabBarOptions={{
-      style:{backgroundColor:Colors.sea_blue_alt},
-      activeTintColor: Colors.white,
-      inactiveTintColor: Colors.sea_blue_dark_alt,
-      tabStyle: { paddingBottom: Metrics.ratio(4) },
-    }}
+    tabBar={props => <CustomTabBar {...props}/>}
     initialRouteName="Home">
     <BottomTabs.Screen
       name="Home"
-      component={LandingStackScreen}
+      component={SeaweedStackScreen}
       options={{
-        tabBarIcon: ({ color, size }) =>
-          renderMaterialCommunityIcons('access-point', color, size)
+        tabBarIcon: ({color, size}) =>
+          renderMaterialCommunityIcons('access-point', color, size),
       }}
     />
     <BottomTabs.Screen
       name="Seaweed"
       component={SeaweedStackScreen}
       options={{
-        tabBarIcon: ({ color, size }) =>
+        tabBarIcon: ({color, size}) =>
           renderMaterialIcons('connected-tv', color, size),
       }}
     />
@@ -71,7 +66,7 @@ const BottomTabsScreen = () => (
       name="BatchDetails"
       component={BatchDetailStackScreen}
       options={{
-        tabBarIcon: ({ color, size }) =>
+        tabBarIcon: ({color, size}) =>
           renderMaterialCommunityIcons('fire', color, size),
       }}
     />
@@ -79,7 +74,7 @@ const BottomTabsScreen = () => (
       name="MarketPlace"
       component={MarketPlaceStackScreen}
       options={{
-        tabBarIcon: ({ color, size }) =>
+        tabBarIcon: ({color, size}) =>
           renderMaterialCommunityIcons('youtube', color, size),
       }}
     />

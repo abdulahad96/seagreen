@@ -1,11 +1,9 @@
-
-
 const Persian_Green = '#00AF9C';
 const sea_green = '#6bb8a7';
 const ggl_purple = '#6200ee';
 const sea_light_grey = '#f5f5f5';
 const dark_blue = '#00002a';
-const footer_green = '#24a790'
+const footer_green = '#24a790';
 const read_only_blue = '#838aa0';
 const white = '#ffffff';
 const sea_green_alt = '#5c9e8f';
@@ -20,26 +18,33 @@ const Aztec = '#101D24';
 const Mercury = '#E6E6E6';
 const Gray_Chateau = '#9FA3A7';
 const Persian_Red = '#CF363A';
-
+const lightseagreen = '#24a790';
+const whitesmoke = '#f5f5f5';
+const dark_navy_blue = '#00002a';
+const lignt_green = '#43bcb1';
 export default {
-Persian_Green,
-sea_green,
-ggl_purple,
-sea_light_grey,
-dark_blue,
-read_only_blue,
-white,
-footer_green,
-sea_green_alt,
-sea_blue,
-sea_blue_alt,
-sea_blue_dark_alt,
-sea_black,
-sea_grey,
-dark_grey,
-dark_green,
-Aztec,
-Mercury,
-Gray_Chateau,
-Persian_Red
+  lignt_green,
+  lightseagreen,
+  dark_navy_blue,
+  whitesmoke,
+  Persian_Green,
+  sea_green,
+  ggl_purple,
+  sea_light_grey,
+  dark_blue,
+  read_only_blue,
+  white,
+  footer_green,
+  sea_green_alt,
+  sea_blue,
+  sea_blue_alt,
+  sea_blue_dark_alt,
+  sea_black,
+  sea_grey,
+  dark_grey,
+  dark_green,
+  Aztec,
+  Mercury,
+  Gray_Chateau,
+  Persian_Red,
 };

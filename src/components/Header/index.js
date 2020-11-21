@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity, Platform } from 'react-native';
+import { Text, View, TouchableOpacity, Image } from 'react-native';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -17,7 +17,6 @@ const Header = ({
   rightIcon,
   rightIconStyle,
   rightBtnPress,
-  rightBtnPress,
   rightIconImageStyle,
   leftIconImageStyle,
   notification
@@ -30,7 +29,6 @@ const Header = ({
     style={[
       styles.container,
       headerShadow && styles.containerShadow,
-      headerStyle
     ]}>
    
     <TouchableOpacity
