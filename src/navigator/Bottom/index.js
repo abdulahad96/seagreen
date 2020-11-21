@@ -49,7 +49,7 @@ const BottomTabsScreen = () => (
     <BottomTabs.Screen
       name="Home"
       image={Images.home_white}
-      component={SeaweedStackScreen}
+      component={MarketPlaceStackScreen}
     />
     <BottomTabs.Screen
       name="Seaweed"
