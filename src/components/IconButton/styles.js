@@ -8,6 +8,7 @@ export default StyleSheet.create({
     borderRadius: Metrics.ratio(10),
     alignItems: 'center',
     paddingVertical: Metrics.ratio(30),
+    elevation: 2
   },
 
   textStyle: {

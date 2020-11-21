@@ -1,8 +1,8 @@
 //* /src/components/TabBar.js */
 
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity,Image} from 'react-native';
-import {Colors, Metrics,Images} from '../../theme';
+import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import {Colors, Metrics, Images} from '../../theme';
 
 const S = StyleSheet.create({
   container: {
@@ -24,8 +24,8 @@ function renderItems(isFocused, label) {
           borderRadius: 100,
           backgroundColor: Colors.whitesmoke,
           top: Metrics.ratio(-30),
-          justifyContent: "center",
-          alignItems: "center"
+          justifyContent: 'center',
+          alignItems: 'center',
         }}>
         <View
           style={{
@@ -33,28 +33,35 @@ function renderItems(isFocused, label) {
             height: '80%',
             borderRadius: 100,
             backgroundColor: Colors.sea_light_grey,
-            justifyContent:"center",
-            alignItems:"center",
+            justifyContent: 'center',
+            alignItems: 'center',
             borderRadius: 100,
-            elevation:20,
-            shadowColor: "rgba(171, 180, 189, 0.35)",
-            shadowOffset: { width: 0, height: 10 },
+            elevation: 20,
+            shadowColor: 'rgba(171, 180, 189, 0.35)',
+            shadowOffset: {width: 0, height: 10},
             shadowOpacity: 10,
             shadowRadius: 20,
           }}>
-                    <Image
-        source={Images.qrCode}
-          style={{
-            width: '90%',
-            height: '90%',
-            
-          }}/>
-          </View>
+          <Image
+            source={Images.qrCode}
+            style={{
+              width: '50%',
+              height: '50%',
+            }}
+          />
+        </View>
       </View>
     );
   }
+  else{
+    if(!isFocused){
+      return <Image source={Images[label]} />
+    }else{
+      return <Image source={Images[`${label}White`]} />
+    }
+  }
 
-  return <Text>{label}1</Text>;
+  
 }
 
 function CustomTabBar({state, descriptors, navigation}) {
@@ -74,7 +81,7 @@ function CustomTabBar({state, descriptors, navigation}) {
         backgroundColor: Colors.lightseagreen,
       }}>
       {state.routes.map((route, index) => {
-        console.log(route)
+        console.log(route);
         const {options} = descriptors[route.key];
         const label =
           options.tabBarLabel !== undefined
@@ -112,7 +119,7 @@ function CustomTabBar({state, descriptors, navigation}) {
             testID={options.tabBarTestID}
             onPress={onPress}
             onLongPress={onLongPress}
-            style={{flex: 1}}>
+            style={{flex: 1, alignItems: "center"}}>
             {renderItems(isFocused, label)}
           </TouchableOpacity>
         );
