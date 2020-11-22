@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity, ImageBackground,ScrollView } from 'react-native';
 import { Images, Metrics, Colors } from '../../theme'
 import styles from './styles';
 import InputContainer from '../../components/Input'
@@ -18,6 +18,8 @@ const SignUp = ({ navigation }) => {
   return (
 
     <View style={styles.container}>
+        <ScrollView style={{marginVertical:Metrics.ratio(10)}}>
+    
       <View >
         <View style={styles.logoContainer}>
           <View style={{ width: Metrics.screenWidth * 0.55, height: Metrics.screenHeight * 0.15, backgroundColor: Colors.read_only_blue }}></View>
@@ -87,7 +89,7 @@ const SignUp = ({ navigation }) => {
         />
 
       </View>
-
+</ScrollView>
     </View >
   );
 }
