@@ -10,7 +10,11 @@ const bell = require('../assets/images/icons/notification.png');
 const cross = require('../assets/images/icons/close.png');
 const map = require('../assets/images/icons/map.png');
 const RightCheck = require('../assets/images/icons/check-mark.png');
+const leftArrow = require("../assets/images/icons/left-arrow.png");
+const filter = require("../assets/images/icons/filter.png");
 export default {
+  leftArrow,
+  filter,
   qrCode,
   BatchDetails,
   BatchDetailsWhite,

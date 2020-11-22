@@ -22,7 +22,9 @@ const lightseagreen = '#24a790';
 const whitesmoke = '#f5f5f5';
 const dark_navy_blue = '#00002a';
 const lignt_green = '#43bcb1';
+const light_grey = "#c4c4c4";
 export default {
+  light_grey,
   lignt_green,
   lightseagreen,
   dark_navy_blue,

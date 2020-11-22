@@ -4,8 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-
-import {MarketPlace, BatchDetails, Seaweed, Home,Notification} from '../../containers';
+import {MarketPlace, BatchDetails, Seaweed, Home,Notification, OfferScreen} from '../../containers';
 import {Metrics, Fonts, Colors,Images} from '../../theme';
 import CustomTabBar from './TabBar';
 
@@ -26,7 +25,7 @@ const LandingStackScreen = () => (
 const BatchDetailStack = createStackNavigator();
 const BatchDetailStackScreen = () => (
   <BatchDetailStack.Navigator headerMode="none">
-    <BatchDetailStack.Screen name="BatchDetail" component={BatchDetails} />
+    <BatchDetailStack.Screen name="BatchDetail" component={OfferScreen} />
   </BatchDetailStack.Navigator>
 );
 const SeaweedStack = createStackNavigator();

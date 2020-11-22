@@ -73,13 +73,13 @@ function CustomTabBar({state, descriptors, navigation}) {
 
   return (
     <View
-      style={{
+      style={[{
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: Metrics.ratio(5),
         height: Metrics.screenHeight * 0.1,
         backgroundColor: Colors.lightseagreen,
-      }}>
+      }]}>
       {state.routes.map((route, index) => {
         const {options} = descriptors[route.key];
         const label =

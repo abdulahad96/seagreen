@@ -1,9 +1,8 @@
 import React, {Component, useState} from 'react';
 import {View, Text, Image} from 'react-native';
-import Header from '../../components/Header';
+import {Header, ButtonContainer} from '../../components';
 import {Metrics, Colors, Fonts, Images} from '../../theme';
 import styles from './styles';
-import ButtonContainer from '../../components/Button';
 import ModalView from '../../components/ModalView';
 
 const Notification = ({navigation}) => {
@@ -75,35 +74,6 @@ const Notification = ({navigation}) => {
             secondTitle: 'ANDYLAW',
             secondValue: "002345"
           })}
-          {/* {renderRow({
-            firstTitle: 'Baled',
-            secondTitle: 'IDR 400',
-            isTiny: false,
-            borderVisible: true,
-          })}
-          {renderRow({
-            firstTitle: 'BATCH ID',
-            isTiny: true,
-            borderVisible: false,
-          })}
-          {renderRow({
-            firstTitle: 'TH8829jqaksdw',
-            isTiny: false,
-            borderVisible: true,
-          })}
-            {renderRow({
-            firstTitle: 'BUYER NAME',
-            secondTitle: 'BUYERS ID',
-            isTiny: true,
-            borderVisible: false,
-          })}
-          {renderRow({
-            firstTitle: 'Andylaw',
-            secondTitle: '002345',
-            isTiny: false,
-            borderVisible: true,
-            isSelected: true
-          })} */}
           <View style={{flexDirection: 'row', justifyContent: 'center'}}>
             <ButtonContainer
               btnInnerStyle={styles.declineButtonView}
