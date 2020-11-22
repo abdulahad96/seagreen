@@ -7,10 +7,11 @@ import styles from './styles';
 
 import {Metrics, Colors} from '../../theme';
 
-const IconContainer = ({headerText, customStyle, title}) => {
+const IconContainer = ({headerText, customStyle, title, onPress}) => {
   return (
-    <View
-      style={[styles.container, customStyle]}>
+    <TouchableOpacity
+      style={[styles.container, customStyle]}
+      onPress = {onPress}>
       <View
         style={{
           width: Metrics.screenWidth * 0.2,
@@ -18,19 +19,21 @@ const IconContainer = ({headerText, customStyle, title}) => {
           backgroundColor: 'red',
         }}></View>
       <Text style={styles.textStyle}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
 IconContainer.propTypes = {
   headerText: PropTypes.string,
   customStyle: PropTypes.object,
-  title: PropTypes.string
+  title: PropTypes.string,
+  onPress: PropTypes.func
 };
 
 IconContainer.defaultProps = {
   headerText: '',
   customStyle: undefined,
-  title: undefined
+  title: undefined,
+  onPress: undefined
 };
 export default IconContainer;

@@ -5,6 +5,9 @@ import styles from './styles';
 import {Fonts, Colors, Metrics} from '../../theme';
 
 const Seaweed = ({navigation}) => {
+  const handleOnPress = (screen_name) => {
+    navigation.navigate(screen_name)
+  }
   return (
     <View style={{...styles.container}}>
       <Header />
@@ -16,10 +19,14 @@ const Seaweed = ({navigation}) => {
             Last Login Jun 12, 2020 4:10pm
           </Text>
           <View style={styles.buttonContainerRow}>
-            <IconContainer title={'My Seaweed'} />
+            <IconContainer
+              title={'My Seaweed'}
+              onPress={() => handleOnPress('')}
+            />
             <IconContainer
               title={'Market Place'}
               customStyle={{marginLeft: Metrics.screenWidth * 0.05}}
+              onPress={() => handleOnPress('')}
             />
           </View>
           <View
@@ -27,10 +34,11 @@ const Seaweed = ({navigation}) => {
               styles.buttonContainerRow,
               {marginTop: Metrics.screenWidth * 0.05},
             ]}>
-            <IconContainer title={'MICRA'} />
+            <IconContainer title={'MICRA'} onPress={() => handleOnPress('')} />
             <IconContainer
               title={'MARI'}
               customStyle={{marginLeft: Metrics.screenWidth * 0.05}}
+              onPress={() => handleOnPress('')}
             />
           </View>
           <View style={{marginVertical: Metrics.ratio(50)}}>
