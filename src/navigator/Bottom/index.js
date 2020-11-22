@@ -5,7 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-import {MarketPlace, BatchDetails, Seaweed, Home} from '../../containers';
+import {MarketPlace, BatchDetails, Seaweed, Home,Notification} from '../../containers';
 import {Metrics, Fonts, Colors,Images} from '../../theme';
 import CustomTabBar from './TabBar';
 
@@ -20,6 +20,7 @@ const Landing = createStackNavigator();
 const LandingStackScreen = () => (
   <Landing.Navigator headerMode="none">
     <Landing.Screen name="Home" component={Home} />
+    <Landing.Screen name="Notification" component={Notification} />
   </Landing.Navigator>
 );
 const BatchDetailStack = createStackNavigator();
@@ -49,7 +50,7 @@ const BottomTabsScreen = () => (
     <BottomTabs.Screen
       name="Home"
       image={Images.home_white}
-      component={SeaweedStackScreen}
+      component={LandingStackScreen}
     />
     <BottomTabs.Screen
       name="Seaweed"

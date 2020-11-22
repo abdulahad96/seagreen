@@ -5,17 +5,17 @@ export default StyleSheet.create({
   container: {
     backgroundColor: Colors.Ebony_Clay,
     height: Metrics.screenHeight * 0.095,
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   containerShadow: {
-    shadowColor: Colors.Black,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
+    // shadowColor: Colors.Black,
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 2,
+    // },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 3.84,
+    // elevation: 5,
   },
   menuImage: {
     width: Metrics.ratio(25),

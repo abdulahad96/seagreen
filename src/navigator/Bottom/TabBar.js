@@ -81,7 +81,6 @@ function CustomTabBar({state, descriptors, navigation}) {
         backgroundColor: Colors.lightseagreen,
       }}>
       {state.routes.map((route, index) => {
-        console.log(route);
         const {options} = descriptors[route.key];
         const label =
           options.tabBarLabel !== undefined

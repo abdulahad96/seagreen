@@ -8,9 +8,9 @@ import {
 
 const AuthStack = createStackNavigator();
 const AuthStackScreen = () => (
-  <AuthStack.Navigator>
+  <AuthStack.Navigator headerMode="none">
 
-    <AuthStack.Screen name="SignIn" component={SignIn} />
+    <AuthStack.Screen  name="SignIn" component={SignIn} />
     
     <AuthStack.Screen name="SignUp" component={SignUp} />
   </AuthStack.Navigator>
