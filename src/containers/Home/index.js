@@ -2,16 +2,18 @@ import React, {Component} from 'react';
 import {View, Text, ScrollView} from 'react-native';
 import {IconContainer, Header} from '../../components';
 import styles from './styles';
-import {Fonts, Colors,Images, Metrics} from '../../theme';
+import {Fonts, Colors, Images, Metrics} from '../../theme';
 
 const Home = ({navigation}) => {
   return (
     <View style={{...styles.container}}>
-      <Header 
-      headerShadow={false}
-       rightIcon={Images.bell}
-       rightIconStyle={{marginRight:Metrics.screenWidth*0.2}}
-     rightBtnPress={()=>{navigation.navigate('Notification')}}
+      <Header
+        headerShadow={false}
+        rightIcon={Images.bell}
+        rightIconStyle={{marginRight: Metrics.screenWidth * 0.2}}
+        rightBtnPress={() => {
+          navigation.navigate('Notification');
+        }}
       />
       <ScrollView>
         <View style={{paddingHorizontal: Metrics.screenWidth * 0.1}}>
