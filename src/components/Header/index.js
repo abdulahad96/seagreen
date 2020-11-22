@@ -20,7 +20,8 @@ const Header = ({
   rightIconImageStyle,
   leftIconImageStyle,
   notification,
-  customContainerStyle
+  headerCustom
+
 }) => {
  
 
@@ -28,7 +29,9 @@ const Header = ({
     <View
     style={[
       styles.container,
-      customContainerStyle
+      headerShadow && styles.containerShadow,
+      headerCustom,
+     
     ]}>
    
     <TouchableOpacity
@@ -74,8 +77,7 @@ Header.propTypes = {
     rightBtnPress: PropTypes.func,
     rightIconImageStyle:PropTypes.object,
     leftIconImageStyle:PropTypes.object,
-    notification:PropTypes.number,
-    customContainerStyle: PropTypes.object
+    notification:PropTypes.number
 
 };
 
@@ -91,7 +93,6 @@ Header.defaultProps = {
     rightBtnPress: undefined,
     rightIconImageStyle:undefined,
     leftIconImageStyle:undefined,
-    notification:undefined,
-    customContainerStyle: undefined
+    notification:undefined
 };
 export default Header;

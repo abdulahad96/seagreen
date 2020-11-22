@@ -8,6 +8,7 @@ const Home = ({navigation}) => {
   return (
     <View style={{...styles.container}}>
       <Header 
+      headerShadow={false}
        rightIcon={Images.bell}
        rightIconStyle={{marginRight:Metrics.screenWidth*0.2}}
      rightBtnPress={()=>{navigation.navigate('Notification')}}

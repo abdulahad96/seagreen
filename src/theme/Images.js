@@ -7,7 +7,9 @@ const Seaweed = require('../assets/images/icons/seaweed.png');
 const SeaweedWhite = require('../assets/images/icons/seaweed-white.png');
 const check = require('../assets/images/icons/check.png');
 const bell = require('../assets/images/icons/notification.png');
-const cross = require('../assets/images/icons/cross.png');
+const cross = require('../assets/images/icons/close.png');
+const map = require('../assets/images/icons/map.png');
+const RightCheck = require('../assets/images/icons/check-mark.png');
 export default {
   qrCode,
   BatchDetails,
@@ -18,5 +20,7 @@ export default {
   SeaweedWhite,
   check,
   bell,
-  cross
+  cross,
+  map,
+  RightCheck
 };

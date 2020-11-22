@@ -8,14 +8,14 @@ export default StyleSheet.create({
     flexDirection: 'row'
   },
   containerShadow: {
-    // shadowColor: Colors.Black,
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 2,
-    // },
-    // shadowOpacity: 0.25,
-    // shadowRadius: 3.84,
-    // elevation: 5,
+    shadowColor: Colors.Black,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   menuImage: {
     width: Metrics.ratio(25),
@@ -32,6 +32,6 @@ export default StyleSheet.create({
     alignSelf: 'center',
     fontSize: Metrics.ratio(18),
     fontFamily: Fonts.type.RobotoBold,
-    color: Colors.Gray_Chateau,
+    color: Colors.white,
   },
 });
