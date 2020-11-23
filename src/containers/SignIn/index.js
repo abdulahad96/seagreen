@@ -2,8 +2,10 @@ import React, { Component, useState } from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, ImageBackground,ScrollView } from 'react-native';
 import { Images, Metrics, Colors } from '../../theme'
 import styles from './styles';
+import { useSelector, useDispatch } from 'react-redux'
 import InputContainer from '../../components/Input'
 import ButtonContainer from '../../components/Button'
+import {request as loginRequest} from '../../redux/actions/Login'
 
 const SignIn = ({ navigation }) => {
   const [passwordHide, setPasswordHide] = useState(true)
@@ -15,6 +17,14 @@ const SignIn = ({ navigation }) => {
   const [emailActive, setEmailActive] = useState(false);
   const [passActive, setPassActive] = useState(false);
 
+  const dispatch = useDispatch()
+  const login = async ()=>{
+    const payload = {
+      email :email,
+      password:password
+    }
+    console.log(payload)
+  }
   return (
 
     <View style={styles.container}>
@@ -31,8 +41,15 @@ const SignIn = ({ navigation }) => {
           isActive={emailActive}
           onChange={(e) => {
             setEmail(e)
-            setEmailActive(!emailActive)
-            setPassActive(false)
+            const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (email.match(emailRegex)){
+              setEmailActive(true)
+            }
+            else{
+              setEmailActive(false)
+            }
+           
+            // setPassActive(false)
           }}
 
           titleTxt={'Email'}
@@ -41,9 +58,10 @@ const SignIn = ({ navigation }) => {
           placeHolder='Enter password'
           isActive={passActive}
           onChange={(e) => {
+        
             setPassword(e)
-            setEmailActive(false)
-            setPassActive(!passActive)
+            // setEmailActive(false)
+            // setPassActive(!passActive)
 
           }}
           secureTextEntry={passwordHide}
@@ -67,7 +85,9 @@ const SignIn = ({ navigation }) => {
           btnTxt="Login"
           txtStyle={styles.submitBtnTxt}
           onPress={() => {
-            navigation.navigate('Home') }}
+            login()
+            // navigation.navigate('Home')
+           }}
         />
 
       </View>

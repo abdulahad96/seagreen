@@ -7,8 +7,8 @@ import AuthStackScreen from './AuthStack';
 const RootStack = createStackNavigator();
 const RootStackScreen = () => (
   <RootStack.Navigator headerMode="none">
-    <RootStack.Screen name="App" component={DrawerScreen} />
     <RootStack.Screen name="Auth" component={AuthStackScreen} />
+    <RootStack.Screen name="App" component={DrawerScreen} />
   </RootStack.Navigator>
 );
 

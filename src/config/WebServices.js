@@ -1,3 +1,3 @@
-// export const baseUrl = "https://www.example.com/api/v1/";
+export const baseUrl = "http://13.212.120.228:9090/";
 
-// export const login_Api = `${baseUrl}login`;
+export const login_Api = `${baseUrl}sg/user/login`;
