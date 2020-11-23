@@ -23,7 +23,7 @@ const SignIn = ({ navigation }) => {
       email :email,
       password:password
     }
-    console.log(payload)
+  
   }
   return (
 
