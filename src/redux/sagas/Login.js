@@ -28,6 +28,7 @@ async function storeLoginResponce(response) {
 function* watchRequest() {
   while (true) {
     const {payload} = yield take(types.LOGIN.REQUEST);
+    console.log(payload,"aaaaaaaaa")
     try {
       const response = yield call(callRequest, payload);
       yield call(storeToken, response);

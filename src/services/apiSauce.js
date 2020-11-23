@@ -1,22 +1,19 @@
-import {create} from 'apisauce';
+import { create } from 'apisauce';
 
 const api = create({
-  headers: {
-    'Content-Type': 'application/json',
-    Accept: 'application/json',
-  },
+
 });
 
 class ApiSauce {
   async post(url, payload) {
-    const Header = {
+
+    console.log(payload)
+    const response = await api.post(url, {}, {
       headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-
-    const response = await api.post(url, payload, {headers: Header});
-
+        'email': payload.email,
+        'password': payload.password
+      }
+    });
     return new Promise((resolve, reject) => {
       this.handlePromise(resolve, reject, response);
     });

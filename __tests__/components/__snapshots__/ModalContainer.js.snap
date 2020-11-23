@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component modal Container renders correctly 1`] = `
+<Modal
+  animationType="slide"
+  hardwareAccelerated={false}
+  transparent={true}
+  visible={true}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffffff",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderRadius": 20,
+          "elevation": 10,
+          "flexDirection": "column",
+          "height": 533.6,
+          "margin": 40,
+          "paddingHorizontal": 70,
+          "paddingTop": 70,
+          "width": 690,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderRadius": 100,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "testUri": "../../../src/assets/images/icons/check-mark.png",
+            }
+          }
+          style={
+            Object {
+              "height": 160,
+              "marginTop": 0,
+              "width": 160,
+            }
+          }
+        />
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "fontSize": 40,
+              "fontWeight": "bold",
+              "marginVertical": 40,
+              "textAlign": "center",
+            }
+          }
+        >
+          
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#24a790",
+            "borderRadius": 50,
+            "elevation": 4,
+            "flexDirection": "row",
+            "height": 100,
+            "justifyContent": "center",
+            "marginBottom": 20,
+            "marginHorizontal": 15,
+            "opacity": 1,
+            "width": "65%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#ffffff",
+              "fontFamily": undefined,
+              "fontSize": 32,
+            }
+          }
+        >
+          Accept
+        </Text>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;
